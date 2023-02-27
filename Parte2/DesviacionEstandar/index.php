@@ -12,21 +12,21 @@
 
   <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // obtener los valores del formulario y convertirlos a un array
+    
     $valores = explode(",", $_POST["valores"]);
 
-    // eliminar espacios en blanco y convertir a números
+   
     $valores = array_map('trim', $valores);
     $valores = array_map('floatval', $valores);
 
-    // calcular la desviación estándar con la función anterior
+    
     $desviacion_estandar = desviacion_estandar($valores);
 
-    // mostrar la desviación estándar
+    
     echo "<p>La desviación estándar de los valores es: $desviacion_estandar</p>";
   }
 
-  // función para calcular la desviación estándar
+  
   function desviacion_estandar($valores) {
     $n = count($valores); // cantidad de valores
     $media = array_sum($valores) / $n; // promedio de los valores
