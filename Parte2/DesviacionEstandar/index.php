@@ -28,16 +28,16 @@
 
   
   function desviacion_estandar($valores) {
-    $n = count($valores); // cantidad de valores
-    $media = array_sum($valores) / $n; // promedio de los valores
+    $n = count($valores); 
+    $media = array_sum($valores) / $n; 
     $sum_cuadrados = 0;
 
     foreach($valores as $valor) {
-      $sum_cuadrados += pow($valor - $media, 2); // elevar al cuadrado y sumar
+      $sum_cuadrados += pow($valor - $media, 2); 
     }
 
-    $varianza = $sum_cuadrados / ($n - 1); // varianza
-    $desviacion_estandar = sqrt($varianza); // raíz cuadrada de la varianza
+    $varianza = $sum_cuadrados / ($n - 1); 
+    $desviacion_estandar = sqrt($varianza); 
 
     return $desviacion_estandar;
   }
