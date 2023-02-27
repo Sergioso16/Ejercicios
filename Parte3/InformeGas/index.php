@@ -1,5 +1,5 @@
 <?php
-// Definimos las matrices de producción y composición de lubricantes
+
 $produccion = array(
     array(3000, 7000, 2000),
     array(4000, 500, 600)
@@ -11,7 +11,7 @@ $composicion = array(
     array(18, 2, 30)
 );
 
-// Función para obtener los totales anuales de aceites finos, alquitrán y grasas residuales
+
 function totales_anuales($produccion, $composicion) {
     $totales = array(0, 0, 0);
     for ($i = 0; $i < count($produccion); $i++) {
@@ -24,7 +24,7 @@ function totales_anuales($produccion, $composicion) {
     return $totales;
 }
 
-// Función para obtener el máximo de litros de alquitrán consumidos por ambas refinerías
+
 function maximo_alquitran($produccion, $composicion) {
     $max_alquitran = 0;
     for ($i = 0; $i < count($produccion); $i++) {
@@ -38,7 +38,7 @@ function maximo_alquitran($produccion, $composicion) {
     return $max_alquitran;
 }
 
-// Función para obtener la matriz de consumo de todos los elementos de un lubricante en cada refinería
+
 function matriz_consumo($produccion, $composicion) {
     $matriz_consumo = array();
     for ($i = 0; $i < count($produccion); $i++) {
@@ -56,7 +56,7 @@ function matriz_consumo($produccion, $composicion) {
     return $matriz_consumo;
 }
 
-// Probamos las funciones con los datos de ejemplo
+
 echo "Totales anuales: ";
 print_r(totales_anuales($produccion, $composicion));
 echo "\n";
