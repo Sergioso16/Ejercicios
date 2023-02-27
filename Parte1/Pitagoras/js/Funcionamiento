@@ -1,0 +1,26 @@
+var a = document.getElementById("a");
+var b = document.getElementById("b");
+
+
+function resultado() {
+    if (a.value == "" || b.value == "") {
+        alert("Introduce por lo menos dos valores");
+    } else if (a.value != "" && b.value != "") {
+        aa = parseInt(a.value);
+        bb = parseInt(b.value);
+        c.value = Math.sqrt(Math.pow(aa,2) + Math.pow(bb,2));
+    } 
+}
+
+function limpiar() {
+ a.value = "";
+ b.value = "";
+ c.value = "";
+}
+
+function limpiar() {
+a.value = "";
+b.value = "";
+c.value = "";
+}
+
